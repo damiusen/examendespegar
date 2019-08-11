@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">examendespegar</string>
+    <string name="BASE_URL">http://private-a2ba2-jovenesdealtovuelo.apiary-mock.com/</string>
 </resources>
