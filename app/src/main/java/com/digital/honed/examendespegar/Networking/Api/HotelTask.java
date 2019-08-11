@@ -1,5 +1,6 @@
 package com.digital.honed.examendespegar.Networking.Api;
 
+import com.digital.honed.examendespegar.Models.HotelDetails;
 import com.digital.honed.examendespegar.Models.HotelList;
 import com.digital.honed.examendespegar.Networking.Callback;
 import com.digital.honed.examendespegar.Networking.NetworkingUtils;
@@ -34,6 +35,34 @@ public class HotelTask {
                     @Override
                     public void onComplete() {
                     
+                    }
+                });
+    }
+
+    public static void getHotelDetail(int hotelId, final Callback<HotelDetails> callback) {
+        NetworkingUtils.getHotelDetailApiInstance()
+                .getHotelDetail(hotelId)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Observer<HotelDetails>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(HotelDetails hotelDetails) {
+                        callback.returnResult(hotelDetails);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        callback.returnError(e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+
                     }
                 });
     }

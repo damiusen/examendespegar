@@ -11,18 +11,21 @@ import com.digital.honed.examendespegar.Models.HotelList;
 import com.digital.honed.examendespegar.Presenters.HotelListPresenter;
 import com.digital.honed.examendespegar.R;
 
+import butterknife.BindView;
+
 
 public class ListHotelsActivity extends BaseActivity implements HotelListContract.View {
 
+    @BindView(R.id.recyclerview) RecyclerView recyclerview;
+
+    private HotelListContract.Presenter mPresenter;
+    HotelsAdapter adapter;
 
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;
     }
 
-    private HotelListContract.Presenter mPresenter;
-    private RecyclerView recyclerview;
-    HotelsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,6 @@ public class ListHotelsActivity extends BaseActivity implements HotelListContrac
 
     @Override
     public void init() {
-        recyclerview = findViewById(R.id.recyclerview);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
         recyclerview.setLayoutManager(manager);
         mPresenter.loadHotels();
