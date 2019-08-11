@@ -4,64 +4,85 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Hotel {
+public class Hotel{
 
-    @SerializedName("industries")
-    public List<String> industries;
+    @SerializedName("id")
+    private int id;
 
-    @SerializedName("company_name")
-    public String company_name;
+    @SerializedName("stars")
+    private String stars;
 
-    @SerializedName("start_year")
-    public String start_year;
+    @SerializedName("name")
+    private String name;
 
-    @SerializedName("end_year")
-    public String end_year;
+    @SerializedName("address")
+    private String address;
 
-    @SerializedName("job_title_name")
-    public String job_title_name;
+    @SerializedName("main_picture")
+    private String main_picture;
 
-    public int getIndustry_id() {
-        return industries.size();
+    @SerializedName("amenities")
+    private List<Amenities> amenities;
+
+    @SerializedName("price")
+    private Price price;
+
+    @SerializedName("userId")
+    private int userId;
+
+    public void setId(int id){
+        this.id = id;
     }
 
-    /*public void setIndustry_id(int industry_id) {
-        this.industry_id = industry_id;
-    }*/
-
-    public String getCompany_name() {
-        return company_name;
+    public int getId(){
+        return id;
     }
 
-    public void setCompany_name(String company_name) {
-        this.company_name = company_name;
+    public void setStars(String stars){
+        this.stars = stars;
     }
 
-    public String getStart_year() {
-        return start_year;
+    public String getStars(){
+        return stars;
     }
 
-    public void setStart_year(String start_year) {
-        this.start_year = start_year;
+    public void setName(String name){
+        this.name = name;
     }
 
-    public String getEnd_year() {
-        return end_year;
+    public String getName(){
+        return name;
     }
 
-    public void setEnd_year(String end_year) {
-        this.end_year = end_year;
+    public void setAddress(String address){
+        this.address = address;
     }
 
-    public String getJob_title_name() {
-        return job_title_name;
+    public String getAddress(){
+        return address;
     }
 
-    public void setJob_title_name(String job_title_name) {
-        this.job_title_name = job_title_name;
+    public void setMainPicture(String main_picture){
+        this.main_picture = main_picture;
     }
 
-    public List<String> getIndustriesName() {
-        return this.industries;
+    public String getMainPicture(){
+        return main_picture;
+    }
+
+    public void setAmenities(List<Amenities> amenities){
+        this.amenities = amenities;
+    }
+
+    public List<Amenities> getAmenities(){
+        return amenities;
+    }
+
+    public void setPrice(Price price){
+        this.price = price;
+    }
+
+    public Price getPrice() {
+        return price;
     }
 }
