@@ -2,11 +2,11 @@ package com.digital.honed.examendespegar.Networking;
 
 public class NetworkingUtils {
 
-    private static HotelService hotelService;
+    private static HotelListService hotelService;
 
-    public static HotelService getHotelApiInstance() {
+    public static HotelListService getHotelApiInstance() {
         if (hotelService == null)
-            hotelService = RetrofitAdapter.getInstance().create(HotelService.class);
+            hotelService = RetrofitAdapter.getInstance().create(HotelListService.class);
 
         return hotelService;
     }

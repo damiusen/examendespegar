@@ -2,7 +2,7 @@ package com.digital.honed.examendespegar.Contracts;
 
 import com.digital.honed.examendespegar.Models.HotelList;
 
-public interface HotelContract {
+public interface HotelListContract {
     interface View {
         void init();
         

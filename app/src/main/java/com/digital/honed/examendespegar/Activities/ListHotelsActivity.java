@@ -6,13 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.digital.honed.examendespegar.Activities.Adapters.HotelsAdapter;
-import com.digital.honed.examendespegar.Contracts.HotelContract;
+import com.digital.honed.examendespegar.Contracts.HotelListContract;
 import com.digital.honed.examendespegar.Models.HotelList;
-import com.digital.honed.examendespegar.Presenters.HotelPresenter;
+import com.digital.honed.examendespegar.Presenters.HotelListPresenter;
 import com.digital.honed.examendespegar.R;
 
 
-public class ListHotelsActivity extends BaseActivity implements HotelContract.View {
+public class ListHotelsActivity extends BaseActivity implements HotelListContract.View {
 
 
     @Override
@@ -20,14 +20,14 @@ public class ListHotelsActivity extends BaseActivity implements HotelContract.Vi
         return R.layout.activity_main;
     }
 
-    private HotelContract.Presenter mPresenter;
+    private HotelListContract.Presenter mPresenter;
     private RecyclerView recyclerview;
     HotelsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPresenter = new HotelPresenter(this);
+        mPresenter = new HotelListPresenter(this);
         mPresenter.start();
     }
 

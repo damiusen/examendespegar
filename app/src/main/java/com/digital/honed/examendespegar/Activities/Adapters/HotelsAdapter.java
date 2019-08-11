@@ -1,11 +1,13 @@
 package com.digital.honed.examendespegar.Activities.Adapters;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.digital.honed.examendespegar.Activities.HotelDetailActivity;
 import com.digital.honed.examendespegar.Models.Hotel;
 import com.digital.honed.examendespegar.R;
 
@@ -14,6 +16,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHolder> {
 
@@ -48,11 +51,19 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
         @BindView(R.id.user_title) TextView tvTitle;
         @BindView(R.id.user_body) TextView tvBody;
 
-
         public MyViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
+
+        @OnClick
+        void onClick(View view) {
+            Intent myIntent = new Intent(view.getContext(), HotelDetailActivity.class);
+            myIntent.putExtra("hotel_id", hotelList.get(getAdapterPosition()).getId());
+            view.getContext().startActivity(myIntent);
+        }
+
+
     }
 
 }

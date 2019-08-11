@@ -1,15 +1,15 @@
 package com.digital.honed.examendespegar.Presenters;
 
-import com.digital.honed.examendespegar.Contracts.HotelContract;
+import com.digital.honed.examendespegar.Contracts.HotelListContract;
 import com.digital.honed.examendespegar.Models.HotelList;
 import com.digital.honed.examendespegar.Networking.Api.HotelTask;
 import com.digital.honed.examendespegar.Networking.Callback;
 
 
-public class HotelPresenter implements HotelContract.Presenter {
-    HotelContract.View mView;
+public class HotelListPresenter implements HotelListContract.Presenter {
+    HotelListContract.View mView;
 
-    public HotelPresenter(HotelContract.View mView) {
+    public HotelListPresenter(HotelListContract.View mView) {
         this.mView = mView;
     }
 

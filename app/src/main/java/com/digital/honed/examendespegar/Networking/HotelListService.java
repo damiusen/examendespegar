@@ -6,7 +6,7 @@ import com.digital.honed.examendespegar.Models.HotelList;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 
-public interface HotelService {
+public interface HotelListService {
 
     @GET("/hotels")
     Observable<HotelList> getHotels();
