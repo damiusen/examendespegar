@@ -2,6 +2,7 @@ package com.digital.honed.examendespegar.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,6 +16,7 @@ import com.digital.honed.examendespegar.Models.HotelDetails;
 import com.digital.honed.examendespegar.Models.Price;
 import com.digital.honed.examendespegar.Presenters.HotelDetailPresenter;
 import com.digital.honed.examendespegar.R;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -31,13 +33,12 @@ public class HotelDetailActivity extends BaseActivity implements HotelDetailCont
     @BindView(R.id.iv_stars) ImageView ivStars;
     @BindView(R.id.tv_description) TextView tvDescription;
     @BindView(R.id.tv_price) TextView tvPrice;
-    @BindView(R.id.iv_main_picture) ImageView ivMainPicture;
+    @BindView(R.id.iv_main_picture) PhotoView ivMainPicture;
     @BindView(R.id.ll_amenities) LinearLayout llAmenities;
-
-    @BindView(R.id.recyclerview) RecyclerView recyclerview;
+    @BindView(R.id.rv_reviews) RecyclerView rvReviews;
 
     private HotelDetailContract.Presenter mPresenter;
-    private CommentsAdapter adapter;
+    CommentsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,8 +89,8 @@ public class HotelDetailActivity extends BaseActivity implements HotelDetailCont
                 .into(ivMainPicture);
 
         adapter = new CommentsAdapter(hotelDetails.getHotel().getReviews());
-        recyclerview.setAdapter(adapter);
-        
+        rvReviews.setAdapter(adapter);
+        rvReviews.setLayoutManager(new LinearLayoutManager(this));
     }
 
 }

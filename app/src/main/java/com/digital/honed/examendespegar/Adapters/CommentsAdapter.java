@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.digital.honed.examendespegar.Models.Review;
 import com.digital.honed.examendespegar.R;
@@ -23,13 +22,15 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_comments, parent, false);
-        ButterKnife.bind(this, view);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-
+        holder.userName.setText(reviews.get(position).getUser().getName());
+        holder.title.setText(reviews.get(position).getComments().getTitle());
+        holder.goodComment.setText(reviews.get(position).getComments().getGood());
+        holder.badComment.setText(reviews.get(position).getComments().getBad());
     }
 
     @Override

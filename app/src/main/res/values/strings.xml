@@ -3,4 +3,8 @@
     <string name="BASE_URL">http://private-a2ba2-jovenesdealtovuelo.apiary-mock.com/</string>
     <string name="tv_description_title">Descripción</string>
     <string name="tv_address_title">Dirección</string>
+    <string name="positive">positivo:</string>
+    <string name="negative">Negativo:</string>
+    <string name="reviews">Reseñas:</string>
+    <string name="description_title">Descripción:</string>
 </resources>

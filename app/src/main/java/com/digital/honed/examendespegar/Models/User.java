@@ -16,35 +16,35 @@ public class User {
     @SerializedName("country")
     private String country;
 
-    public void setCurrency(String name){
+    public void setName(String name){
         this.name = name;
     }
 
-    public String getCurrency(){
+    public String getName(){
         return name;
     }
 
-    public void setFinalPrice(String first_name){
+    public void setFirstName(String first_name){
         this.first_name = first_name;
     }
 
-    public String getFinalPrice(){
+    public String getFirstName(){
         return first_name;
     }
 
-    public void setBase(String last_name){
+    public void setLastName(String last_name){
         this.last_name = last_name;
     }
 
-    public String getBase(){
+    public String getLastName(){
         return last_name;
     }
 
-    public void setBest(String country){
+    public void setCountry(String country){
         this.country = country;
     }
 
-    public String getBest(){
+    public String getCountry(){
         return country;
     }
 }

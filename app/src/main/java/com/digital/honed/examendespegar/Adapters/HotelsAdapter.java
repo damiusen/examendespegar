@@ -32,7 +32,6 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item, parent, false);
-        ButterKnife.bind(this, view);
         return new MyViewHolder(view);
     }
 
