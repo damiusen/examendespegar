@@ -14,6 +14,8 @@ import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 
+import static com.digital.honed.examendespegar.Helpers.StarRating.getStarImage;
+
 
 public class HotelDetailActivity extends BaseActivity implements HotelDetailContract.View {
 
@@ -65,19 +67,4 @@ public class HotelDetailActivity extends BaseActivity implements HotelDetailCont
         
     }
 
-    private int getStarImage(int starId){
-        switch (starId){
-            case 1:
-                return R.drawable.onestars;
-            case 2:
-                return R.drawable.twostars;
-            case 3:
-                return R.drawable.threestars;
-            case 4:
-                return R.drawable.fourstars;
-            case 5:
-                return R.drawable.fivestars;
-        }
-        return 1;
-    }
 }

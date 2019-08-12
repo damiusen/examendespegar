@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginTop="16dp"
     android:orientation="vertical">
 
@@ -32,11 +33,15 @@
         android:layout_weight="1"
         android:text="TextView" />
 
-    <TextView
+    <ImageView
         android:id="@+id/iv_stars"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="106dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:text="TextView"
+        tools:srcCompat="@drawable/fivestars" />
 
 </LinearLayout>
