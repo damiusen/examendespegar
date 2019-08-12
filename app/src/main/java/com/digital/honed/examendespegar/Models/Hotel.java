@@ -18,6 +18,9 @@ public class Hotel{
     @SerializedName("address")
     private String address;
 
+    @SerializedName("description")
+    private String description;
+
     @SerializedName("main_picture")
     private String main_picture;
 
@@ -60,6 +63,14 @@ public class Hotel{
 
     public String getAddress(){
         return address;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
+
+    public String getDescription(){
+        return description;
     }
 
     public void setMainPicture(String main_picture){

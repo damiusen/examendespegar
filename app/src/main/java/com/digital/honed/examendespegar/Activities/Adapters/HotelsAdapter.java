@@ -55,7 +55,7 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
 
         @BindView(R.id.tv_name) TextView tvName;
         @BindView(R.id.tv_address) TextView tvAddress;
-        @BindView(R.id.tv_stars) TextView tvStars;
+        @BindView(R.id.iv_stars) TextView tvStars;
         @BindView(R.id.iv_main_picture) ImageView ivMainPicture;
 
         public MyViewHolder(View itemView) {
