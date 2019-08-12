@@ -5,7 +5,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.digital.honed.examendespegar.Activities.Adapters.HotelsAdapter;
+import com.digital.honed.examendespegar.Adapters.HotelsAdapter;
 import com.digital.honed.examendespegar.Contracts.HotelListContract;
 import com.digital.honed.examendespegar.Models.HotelList;
 import com.digital.honed.examendespegar.Presenters.HotelListPresenter;

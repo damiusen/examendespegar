@@ -1,4 +1,4 @@
-package com.digital.honed.examendespegar.Activities.Adapters;
+package com.digital.honed.examendespegar.Adapters;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;

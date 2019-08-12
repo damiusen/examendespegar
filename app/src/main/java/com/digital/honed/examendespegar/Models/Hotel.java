@@ -30,6 +30,9 @@ public class Hotel{
     @SerializedName("price")
     private Price price;
 
+    @SerializedName("reviews")
+    private List<Review> reviews;
+
     @SerializedName("userId")
     private int userId;
 
@@ -95,5 +98,13 @@ public class Hotel{
 
     public Price getPrice() {
         return price;
+    }
+
+    public void setReviews(List<Review> reviews){
+        this.reviews = reviews;
+    }
+
+    public List<Review> getReviews(){
+        return reviews;
     }
 }
