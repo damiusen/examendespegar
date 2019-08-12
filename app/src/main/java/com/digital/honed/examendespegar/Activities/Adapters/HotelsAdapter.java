@@ -5,11 +5,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.digital.honed.examendespegar.Activities.HotelDetailActivity;
 import com.digital.honed.examendespegar.Models.Hotel;
 import com.digital.honed.examendespegar.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,9 +37,13 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.tvTitle.setText(hotelList.get(position).getName());
-        holder.tvId.setText(hotelList.get(position).getId()+"");
-        holder.tvBody.setText(hotelList.get(position).getAddress());
+        holder.tvName.setText(hotelList.get(position).getName());
+        holder.tvAddress.setText(hotelList.get(position).getAddress());
+        holder.tvStars.setText(hotelList.get(position).getStars());
+
+        Picasso.get()
+                .load(hotelList.get(position).getMainPicture())
+                .into(holder.ivMainPicture);
     }
 
     @Override
@@ -47,9 +53,10 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.user_id) TextView tvId;
-        @BindView(R.id.user_title) TextView tvTitle;
-        @BindView(R.id.user_body) TextView tvBody;
+        @BindView(R.id.tv_name) TextView tvName;
+        @BindView(R.id.tv_address) TextView tvAddress;
+        @BindView(R.id.tv_stars) TextView tvStars;
+        @BindView(R.id.iv_main_picture) ImageView ivMainPicture;
 
         public MyViewHolder(View itemView) {
             super(itemView);
